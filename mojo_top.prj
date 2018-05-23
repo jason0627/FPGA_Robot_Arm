@@ -1,0 +1,5 @@
+verilog work "uart_tx.v"
+verilog work "uart_rx.v"
+verilog work "servo.v"
+verilog work "position.v"
+verilog work "src/mojo_top.v"

@@ -1,0 +1,702 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: mojo_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mojo_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "mojo_top"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-tqg144
+
+---- Source Options
+Top Module Name                    : mojo_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\FPGA\project\Release\FPGA_Robot_Arm_20180514\uart_tx.v" into library work
+Parsing module <serial_tx>.
+INFO:HDLCompiler:693 - "E:\FPGA\project\Release\FPGA_Robot_Arm_20180514\uart_tx.v" Line 14. parameter declaration becomes local in serial_tx with formal parameter declaration list
+Analyzing Verilog file "E:\FPGA\project\Release\FPGA_Robot_Arm_20180514\uart_rx.v" into library work
+Parsing module <serial_rx>.
+INFO:HDLCompiler:693 - "E:\FPGA\project\Release\FPGA_Robot_Arm_20180514\uart_rx.v" Line 13. parameter declaration becomes local in serial_rx with formal parameter declaration list
+Analyzing Verilog file "E:\FPGA\project\Release\FPGA_Robot_Arm_20180514\servo.v" into library work
+Parsing module <servo>.
+Analyzing Verilog file "E:\FPGA\project\Release\FPGA_Robot_Arm_20180514\position.v" into library work
+Parsing module <position>.
+Analyzing Verilog file "E:\FPGA\project\Release\FPGA_Robot_Arm_20180514\src\mojo_top.v" into library work
+Parsing module <mojo_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <mojo_top>.
+
+Elaborating module <position>.
+WARNING:HDLCompiler:413 - "E:\FPGA\project\Release\FPGA_Robot_Arm_20180514\position.v" Line 51: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\FPGA\project\Release\FPGA_Robot_Arm_20180514\position.v" Line 57: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\FPGA\project\Release\FPGA_Robot_Arm_20180514\position.v" Line 63: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\FPGA\project\Release\FPGA_Robot_Arm_20180514\position.v" Line 69: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\FPGA\project\Release\FPGA_Robot_Arm_20180514\position.v" Line 75: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\FPGA\project\Release\FPGA_Robot_Arm_20180514\position.v" Line 81: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\FPGA\project\Release\FPGA_Robot_Arm_20180514\position.v" Line 87: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\FPGA\project\Release\FPGA_Robot_Arm_20180514\position.v" Line 93: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\FPGA\project\Release\FPGA_Robot_Arm_20180514\position.v" Line 108: Result of 28-bit expression is truncated to fit in 27-bit target.
+
+Elaborating module <servo>.
+
+Elaborating module <serial_rx>.
+
+Elaborating module <serial_tx>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <mojo_top>.
+    Related source file is "E:\FPGA\project\Release\FPGA_Robot_Arm_20180514\src\mojo_top.v".
+WARNING:Xst:647 - Input <cclk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:737 - Found 1-bit latch for signal <motor<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <motor<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <motor<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <motor<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <motor<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <motor<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <motor<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <motor<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   8 Latch(s).
+Unit <mojo_top> synthesized.
+
+Synthesizing Unit <position>.
+    Related source file is "E:\FPGA\project\Release\FPGA_Robot_Arm_20180514\position.v".
+    Found 8-bit register for signal <servo_pos_1_d>.
+    Found 8-bit register for signal <servo_pos_2_d>.
+    Found 8-bit register for signal <servo_pos_3_d>.
+    Found 8-bit register for signal <servo_pos_4_d>.
+    Found 27-bit register for signal <ctr_q>.
+    Found 8-bit register for signal <servo_pos_1_q>.
+    Found 8-bit register for signal <servo_pos_2_q>.
+    Found 8-bit register for signal <servo_pos_3_q>.
+    Found 8-bit register for signal <servo_pos_4_q>.
+    Found 8-bit register for signal <led_indicate>.
+    Found 8-bit adder for signal <servo_pos_1_q[7]_GND_2_o_add_7_OUT> created at line 51.
+    Found 8-bit adder for signal <servo_pos_2_q[7]_GND_2_o_add_13_OUT> created at line 63.
+    Found 8-bit adder for signal <servo_pos_3_q[7]_GND_2_o_add_19_OUT> created at line 75.
+    Found 8-bit adder for signal <servo_pos_4_q[7]_GND_2_o_add_25_OUT> created at line 87.
+    Found 27-bit adder for signal <ctr_d> created at line 108.
+    Found 8-bit subtractor for signal <GND_2_o_GND_2_o_sub_11_OUT<7:0>> created at line 57.
+    Found 8-bit subtractor for signal <GND_2_o_GND_2_o_sub_17_OUT<7:0>> created at line 69.
+    Found 8-bit subtractor for signal <GND_2_o_GND_2_o_sub_23_OUT<7:0>> created at line 81.
+    Found 8-bit subtractor for signal <GND_2_o_GND_2_o_sub_29_OUT<7:0>> created at line 93.
+    Found 16x8-bit Read Only RAM for signal <_n0146>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred  99 D-type flip-flop(s).
+	inferred  40 Multiplexer(s).
+Unit <position> synthesized.
+
+Synthesizing Unit <servo>.
+    Related source file is "E:\FPGA\project\Release\FPGA_Robot_Arm_20180514\servo.v".
+    Found 1-bit register for signal <pwm_q>.
+    Found 20-bit register for signal <ctr_q>.
+    Found 20-bit adder for signal <ctr_d> created at line 16.
+    Found 9-bit adder for signal <n0016[8:0]> created at line 17.
+    Found 12-bit comparator greater for signal <pwm_d> created at line 17
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  21 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <servo> synthesized.
+
+Synthesizing Unit <serial_rx>.
+    Related source file is "E:\FPGA\project\Release\FPGA_Robot_Arm_20180514\uart_rx.v".
+        CLK_PER_BIT = 5208
+    Found 3-bit register for signal <bit_ctr_q>.
+    Found 1-bit register for signal <new_data_q>.
+    Found 2-bit register for signal <state_q>.
+    Found 1-bit register for signal <rx_q>.
+    Found 8-bit register for signal <data_q>.
+    Found 13-bit register for signal <ctr_q>.
+    Found finite state machine <FSM_0> for signal <state_q>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Power Up State     | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 13-bit adder for signal <ctr_q[12]_GND_4_o_add_7_OUT> created at line 54.
+    Found 3-bit adder for signal <bit_ctr_q[2]_GND_4_o_add_9_OUT> created at line 57.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  26 D-type flip-flop(s).
+	inferred   7 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <serial_rx> synthesized.
+
+Synthesizing Unit <serial_tx>.
+    Related source file is "E:\FPGA\project\Release\FPGA_Robot_Arm_20180514\uart_tx.v".
+        CLK_PER_BIT = 5208
+    Found 1-bit register for signal <tx_q>.
+    Found 8-bit register for signal <data_q>.
+    Found 3-bit register for signal <bit_ctr_q>.
+    Found 13-bit register for signal <ctr_q>.
+    Found 2-bit register for signal <state_q>.
+    Found finite state machine <FSM_1> for signal <state_q>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Power Up State     | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 3-bit adder for signal <bit_ctr_q[2]_GND_13_o_add_9_OUT> created at line 60.
+    Found 13-bit adder for signal <ctr_q[12]_GND_13_o_add_15_OUT> created at line 69.
+    Found 1-bit 7-to-1 multiplexer for signal <bit_ctr_q[2]_data_q[7]_Mux_6_o> created at line 56.
+    Found 13-bit 4-to-1 multiplexer for signal <ctr_d> created at line 35.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <serial_tx> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x8-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 17
+ 13-bit adder                                          : 2
+ 20-bit adder                                          : 4
+ 27-bit adder                                          : 1
+ 3-bit adder                                           : 2
+ 8-bit addsub                                          : 4
+ 9-bit adder                                           : 4
+# Registers                                            : 27
+ 1-bit register                                        : 7
+ 13-bit register                                       : 2
+ 20-bit register                                       : 4
+ 27-bit register                                       : 1
+ 3-bit register                                        : 2
+ 8-bit register                                        : 11
+# Latches                                              : 8
+ 1-bit latch                                           : 8
+# Comparators                                          : 4
+ 12-bit comparator greater                             : 4
+# Multiplexers                                         : 51
+ 1-bit 2-to-1 multiplexer                              : 2
+ 1-bit 7-to-1 multiplexer                              : 1
+ 13-bit 2-to-1 multiplexer                             : 5
+ 13-bit 4-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 40
+# FSMs                                                 : 2
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <data_q_1> in Unit <my_serial_tx> is equivalent to the following 3 FFs/Latches, which will be removed : <data_q_2> <data_q_3> <data_q_5> 
+WARNING:Xst:1710 - FF/Latch <data_q_1> (without init value) has a constant value of 1 in block <my_serial_tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <data_q_0> of sequential type is unconnected in block <my_serial_tx>.
+WARNING:Xst:2677 - Node <data_q_4> of sequential type is unconnected in block <my_serial_tx>.
+WARNING:Xst:2677 - Node <data_q_6> of sequential type is unconnected in block <my_serial_tx>.
+WARNING:Xst:2677 - Node <data_q_7> of sequential type is unconnected in block <my_serial_tx>.
+WARNING:Xst:2404 -  FFs/Latches <data_q<7:6>> (without init value) have a constant value of 0 in block <serial_tx>.
+
+Synthesizing (advanced) Unit <position>.
+The following registers are absorbed into counter <ctr_q>: 1 register on signal <ctr_q>.
+INFO:Xst:3231 - The small RAM <Mram__n0146> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <action<3:0>>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <position> synthesized (advanced).
+
+Synthesizing (advanced) Unit <serial_rx>.
+The following registers are absorbed into counter <bit_ctr_q>: 1 register on signal <bit_ctr_q>.
+Unit <serial_rx> synthesized (advanced).
+
+Synthesizing (advanced) Unit <serial_tx>.
+The following registers are absorbed into counter <bit_ctr_q>: 1 register on signal <bit_ctr_q>.
+Unit <serial_tx> synthesized (advanced).
+
+Synthesizing (advanced) Unit <servo>.
+The following registers are absorbed into counter <ctr_q>: 1 register on signal <ctr_q>.
+Unit <servo> synthesized (advanced).
+WARNING:Xst:2677 - Node <data_q_0> of sequential type is unconnected in block <serial_tx>.
+WARNING:Xst:2677 - Node <data_q_4> of sequential type is unconnected in block <serial_tx>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x8-bit single-port distributed Read Only RAM        : 1
+# Adders/Subtractors                                   : 10
+ 13-bit adder                                          : 2
+ 8-bit addsub                                          : 4
+ 9-bit adder                                           : 4
+# Counters                                             : 7
+ 20-bit up counter                                     : 4
+ 27-bit up counter                                     : 1
+ 3-bit up counter                                      : 2
+# Registers                                            : 117
+ Flip-Flops                                            : 117
+# Comparators                                          : 4
+ 12-bit comparator greater                             : 4
+# Multiplexers                                         : 49
+ 1-bit 2-to-1 multiplexer                              : 2
+ 1-bit 7-to-1 multiplexer                              : 1
+ 13-bit 2-to-1 multiplexer                             : 5
+ 13-bit 4-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 40
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <data_q_1> (without init value) has a constant value of 1 in block <serial_tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_q_2> (without init value) has a constant value of 1 in block <serial_tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_q_3> (without init value) has a constant value of 1 in block <serial_tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_q_5> (without init value) has a constant value of 1 in block <serial_tx>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2146 - In block <mojo_top>, Counter <my_servo_4/ctr_q> <my_servo_3/ctr_q> <my_servo_2/ctr_q> <my_servo_1/ctr_q> are equivalent, XST will keep only <my_servo_4/ctr_q>.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <my_serial_rx/FSM_0> on signal <state_q[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 11
+ 11    | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <my_serial_tx/FSM_1> on signal <state_q[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 11
+ 11    | 10
+-------------------
+WARNING:Xst:1710 - FF/Latch <led_indicate_3> (without init value) has a constant value of 0 in block <position>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <led_indicate_4> (without init value) has a constant value of 1 in block <position>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <led_indicate_5> (without init value) has a constant value of 1 in block <position>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <led_indicate_6> (without init value) has a constant value of 0 in block <position>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <led_indicate_7> (without init value) has a constant value of 0 in block <position>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <ctr_q_19> of sequential type is unconnected in block <position>.
+WARNING:Xst:2677 - Node <ctr_q_20> of sequential type is unconnected in block <position>.
+WARNING:Xst:2677 - Node <ctr_q_21> of sequential type is unconnected in block <position>.
+WARNING:Xst:2677 - Node <ctr_q_22> of sequential type is unconnected in block <position>.
+WARNING:Xst:2677 - Node <ctr_q_23> of sequential type is unconnected in block <position>.
+WARNING:Xst:2677 - Node <ctr_q_24> of sequential type is unconnected in block <position>.
+WARNING:Xst:2677 - Node <ctr_q_25> of sequential type is unconnected in block <position>.
+WARNING:Xst:2677 - Node <ctr_q_26> of sequential type is unconnected in block <position>.
+
+Optimizing unit <mojo_top> ...
+
+Optimizing unit <position> ...
+
+Optimizing unit <serial_rx> ...
+
+Optimizing unit <serial_tx> ...
+INFO:Xst:2261 - The FF/Latch <my_servo_4/ctr_q_10> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <my_position/ctr_q_10> 
+INFO:Xst:2261 - The FF/Latch <my_servo_4/ctr_q_11> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <my_position/ctr_q_11> 
+INFO:Xst:2261 - The FF/Latch <my_servo_4/ctr_q_12> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <my_position/ctr_q_12> 
+INFO:Xst:2261 - The FF/Latch <my_servo_4/ctr_q_13> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <my_position/ctr_q_13> 
+INFO:Xst:2261 - The FF/Latch <my_servo_4/ctr_q_14> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <my_position/ctr_q_14> 
+INFO:Xst:2261 - The FF/Latch <my_servo_4/ctr_q_15> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <my_position/ctr_q_15> 
+INFO:Xst:2261 - The FF/Latch <my_servo_4/ctr_q_16> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <my_position/ctr_q_16> 
+INFO:Xst:2261 - The FF/Latch <my_servo_4/ctr_q_17> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <my_position/ctr_q_17> 
+INFO:Xst:2261 - The FF/Latch <my_servo_4/ctr_q_18> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <my_position/ctr_q_18> 
+INFO:Xst:2261 - The FF/Latch <my_servo_4/ctr_q_0> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <my_position/ctr_q_0> 
+INFO:Xst:2261 - The FF/Latch <my_servo_4/ctr_q_1> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <my_position/ctr_q_1> 
+INFO:Xst:2261 - The FF/Latch <my_servo_4/ctr_q_2> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <my_position/ctr_q_2> 
+INFO:Xst:2261 - The FF/Latch <my_servo_4/ctr_q_3> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <my_position/ctr_q_3> 
+INFO:Xst:2261 - The FF/Latch <my_servo_4/ctr_q_4> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <my_position/ctr_q_4> 
+INFO:Xst:2261 - The FF/Latch <my_servo_4/ctr_q_5> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <my_position/ctr_q_5> 
+INFO:Xst:2261 - The FF/Latch <my_servo_4/ctr_q_6> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <my_position/ctr_q_6> 
+INFO:Xst:2261 - The FF/Latch <my_servo_4/ctr_q_7> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <my_position/ctr_q_7> 
+INFO:Xst:2261 - The FF/Latch <my_servo_4/ctr_q_8> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <my_position/ctr_q_8> 
+INFO:Xst:2261 - The FF/Latch <my_servo_4/ctr_q_9> in Unit <mojo_top> is equivalent to the following FF/Latch, which will be removed : <my_position/ctr_q_9> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block mojo_top, actual ratio is 6.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 138
+ Flip-Flops                                            : 138
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : mojo_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 373
+#      GND                         : 1
+#      INV                         : 12
+#      LUT1                        : 43
+#      LUT2                        : 9
+#      LUT3                        : 15
+#      LUT4                        : 69
+#      LUT5                        : 48
+#      LUT6                        : 58
+#      MUXCY                       : 67
+#      MUXF7                       : 4
+#      VCC                         : 1
+#      XORCY                       : 46
+# FlipFlops/Latches                : 146
+#      FD                          : 51
+#      FDE                         : 10
+#      FDR                         : 31
+#      FDRE                        : 41
+#      FDS                         : 1
+#      FDSE                        : 4
+#      LD                          : 8
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 16
+#      IBUF                        : 3
+#      OBUF                        : 13
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             143  out of  11440     1%  
+ Number of Slice LUTs:                  254  out of   5720     4%  
+    Number used as Logic:               254  out of   5720     4%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    293
+   Number with an unused Flip Flop:     150  out of    293    51%  
+   Number with an unused LUT:            39  out of    293    13%  
+   Number of fully used LUT-FF pairs:   104  out of    293    35%  
+   Number of unique control sets:        11
+
+IO Utilization: 
+ Number of IOs:                          18
+ Number of bonded IOBs:                  17  out of    102    16%  
+    IOB Flip Flops/Latches:               3
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+my_serial_rx/new_data_q            | NONE(motor_6)          | 8     |
+clk                                | BUFGP                  | 103   |
+my_servo_4/ctr_q_18                | BUFG                   | 35    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 5.661ns (Maximum Frequency: 176.647MHz)
+   Minimum input arrival time before clock: 4.409ns
+   Maximum output required time after clock: 4.118ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.661ns (frequency: 176.647MHz)
+  Total number of paths / destination ports: 1808 / 93
+-------------------------------------------------------------------------
+Delay:               5.661ns (Levels of Logic = 3)
+  Source:            my_serial_rx/ctr_q_1 (FF)
+  Destination:       my_serial_rx/data_q_7 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: my_serial_rx/ctr_q_1 to my_serial_rx/data_q_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.525   1.221  my_serial_rx/ctr_q_1 (my_serial_rx/ctr_q_1)
+     LUT6:I0->O            2   0.254   0.726  my_serial_rx/GND_4_o_GND_4_o_equal_9_o<12>_SW0 (N24)
+     LUT6:I5->O           16   0.254   1.182  my_serial_rx/GND_4_o_GND_4_o_equal_9_o<12> (my_serial_rx/GND_4_o_GND_4_o_equal_9_o)
+     LUT3:I2->O            8   0.254   0.943  my_serial_rx/_n0093_inv11 (my_serial_rx/Mmux_new_data_d11)
+     FDE:CE                    0.302          my_serial_rx/data_q_0
+    ----------------------------------------
+    Total                      5.661ns (1.589ns logic, 4.072ns route)
+                                       (28.1% logic, 71.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 44 / 44
+-------------------------------------------------------------------------
+Offset:              4.409ns (Levels of Logic = 2)
+  Source:            rst_n (PAD)
+  Destination:       my_servo_4/ctr_q_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst_n to my_servo_4/ctr_q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.681  rst_n_IBUF (rst_n_IBUF)
+     INV:I->O             42   0.255   1.686  rst1_INV_0 (rst)
+     FDR:R                     0.459          my_servo_4/ctr_q_0
+    ----------------------------------------
+    Total                      4.409ns (2.042ns logic, 2.367ns route)
+                                       (46.3% logic, 53.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'my_servo_4/ctr_q_18'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              4.118ns (Levels of Logic = 1)
+  Source:            my_position/led_indicate_2 (FF)
+  Destination:       led<2> (PAD)
+  Source Clock:      my_servo_4/ctr_q_18 rising
+
+  Data Path: my_position/led_indicate_2 to led<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.525   0.681  my_position/led_indicate_2 (my_position/led_indicate_2)
+     OBUF:I->O                 2.912          led_2_OBUF (led<2>)
+    ----------------------------------------
+    Total                      4.118ns (3.437ns logic, 0.681ns route)
+                                       (83.5% logic, 16.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              4.118ns (Levels of Logic = 1)
+  Source:            my_serial_tx/tx_q (FF)
+  Destination:       uart_tx (PAD)
+  Source Clock:      clk rising
+
+  Data Path: my_serial_tx/tx_q to uart_tx
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              1   0.525   0.681  my_serial_tx/tx_q (my_serial_tx/tx_q)
+     OBUF:I->O                 2.912          uart_tx_OBUF (uart_tx)
+    ----------------------------------------
+    Total                      4.118ns (3.437ns logic, 0.681ns route)
+                                       (83.5% logic, 16.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+-------------------+---------+---------+---------+---------+
+                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------+---------+---------+---------+---------+
+clk                |    5.661|         |         |         |
+my_servo_4/ctr_q_18|    1.280|         |         |         |
+-------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock my_serial_rx/new_data_q
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    1.286|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock my_servo_4/ctr_q_18
+-----------------------+---------+---------+---------+---------+
+                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------+---------+---------+---------+---------+
+clk                    |    8.742|         |         |         |
+my_serial_rx/new_data_q|         |    9.972|         |         |
+-----------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.33 secs
+ 
+--> 
+
+Total memory usage is 344912 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   43 (   0 filtered)
+Number of infos    :   24 (   0 filtered)
+
